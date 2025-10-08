@@ -1,7 +1,75 @@
 
-*{
+/* Reset básico - quita márgenes y padding por defecto del navegador */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Configuración general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Tipografía sencilla similar a la guía */
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+    color: #333; /* Color de texto gris oscuro */
+    padding: 20px; /* Espaciado interno de la página */
+    max-width: 800px; /* Ancho máximo para que no se vea muy estirado */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Título principal - usa el color negro de la paleta */
+h1 {
+    color: #000000; /* Negro de la paleta */
+    font-size: 2.5em; /* Tamaño grande para el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    text-align: center; /* Centra el título */
+}
+
+/* Títulos secundarios - usa el color verde de la paleta */
+h2 {
+    color: #22C55E; /* Verde de la paleta */
+    font-size: 1.8em;
+    margin-top: 30px; /* Espacio arriba */
+    margin-bottom: 15px; /* Espacio abajo */
+    border-bottom: 2px solid #22C55E; /* Línea decorativa verde */
+    padding-bottom: 5px;
+}
+
+/* Títulos de proyectos - usa el amarillo de la paleta */
+h3 {
+    color: #FFC107; /* Amarillo de la paleta */
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Párrafos - espaciado y legibilidad */
+p {
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Enlaces - estilo de botón basado en la guía */
+a {
+    color: #ffffff; /* Texto blanco */
+    background-color: #000000; /* Fondo negro como en la guía */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 8px 16px; /* Espaciado interno del botón */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    display: inline-block; /* Para que funcione el padding */
+    margin: 5px 0; /* Pequeño margen */
+    transition: background-color 0.3s; /* Animación suave al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+a:hover {
+    background-color: #22C55E; /* Cambia a verde al pasar el mouse */
+}
+
+/* Sección de contacto - destaca con fondo gris claro */
+h2:last-of-type {
+    background-color: #f8f9fa; /* Fondo gris muy claro */
+    padding: 15px;
+    border-radius: 8px;
+    border: none; /* Quita la línea inferior */
 }
 
