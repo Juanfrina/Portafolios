@@ -10,18 +10,30 @@
 body {
     font-family: Arial, sans-serif; /* Tipografía sencilla similar a la guía */
     line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
-    color: #333; /* Color de texto gris oscuro */
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Color de texto blanco para contraste */
     padding: 20px; /* Espaciado interno de la página */
     max-width: 800px; /* Ancho máximo para que no se vea muy estirado */
     margin: 0 auto; /* Centra el contenido */
 }
 
-/* Título principal - usa el color negro de la paleta */
+/* Título principal - usa color blanco para contraste con fondo negro */
 h1 {
-    color: #000000; /* Negro de la paleta */
+    color: #ffffff; /* Blanco para que se vea en el fondo negro */
     font-size: 2.5em; /* Tamaño grande para el título */
-    margin-bottom: 30px; /* Espacio debajo del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
     text-align: center; /* Centra el título */
+}
+
+/* Estilo para la foto de perfil */
+.foto-perfil {
+    width: 200px; /* Ancho de la imagen */
+    height: 200px; /* Alto de la imagen */
+    border-radius: 50%; /* Hace la imagen circular */
+    display: block; /* Para poder centrarla */
+    margin: 0 auto 30px auto; /* Centra la imagen y le da margen abajo */
+    border: 4px solid #22C55E; /* Borde verde siguiendo la paleta */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
 }
 
 /* Títulos secundarios - usa el color verde de la paleta */
@@ -50,14 +62,15 @@ p {
 
 /* Enlaces - estilo de botón basado en la guía */
 a {
-    color: #ffffff; /* Texto blanco */
-    background-color: #000000; /* Fondo negro como en la guía */
+    color: #000000; /* Texto negro */
+    background-color: #ffffff; /* Fondo blanco para contraste */
     text-decoration: none; /* Quita el subrayado */
     padding: 8px 16px; /* Espaciado interno del botón */
     border-radius: 4px; /* Esquinas ligeramente redondeadas */
     display: inline-block; /* Para que funcione el padding */
     margin: 5px 0; /* Pequeño margen */
     transition: background-color 0.3s; /* Animación suave al pasar el mouse */
+    border: 2px solid #ffffff; /* Borde blanco */
 }
 
 /* Efecto al pasar el mouse sobre los enlaces */
@@ -65,11 +78,12 @@ a:hover {
     background-color: #22C55E; /* Cambia a verde al pasar el mouse */
 }
 
-/* Sección de contacto - destaca con fondo gris claro */
+/* Sección de contacto - destaca con fondo gris oscuro */
 h2:last-of-type {
-    background-color: #f8f9fa; /* Fondo gris muy claro */
+    background-color: #333333; /* Fondo gris oscuro para contraste */
     padding: 15px;
     border-radius: 8px;
     border: none; /* Quita la línea inferior */
+    color: #ffffff; /* Texto blanco */
 }
 
