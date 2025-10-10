@@ -1,33 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Mi Portfolio</title>
+    <script src="script.js" defer></script>
+    <title>Juan Francisco - Portfolio</title>
 </head>
+
 <body>
-    <h1>Mi Portfolio</h1>
-    
-    <!-- Imagen de perfil -->
-    <img src="imagenes/foto-perfil animado.png" alt="Juan Francisco - Perfil" class="foto-perfil">
+    <!-- Navegación principal -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>Sobre mí</h2>
-    <p>Hola, soy Juan Francisco alumno de DAW.</p>
-    
-    <h2>Proyectos</h2>
-    <h3>Proyecto 1: Guia de Estilos en Figma</h3>
-    <p><a href="https://www.figma.com/design/lLY60QwawBcDnVJPYQTPIB/Sin-t%C3%ADtulo?node-id=0-1&t=TlMRY9pOhbTX0g6D-1">Ver proyecto</a></p>
-    <h3>Proyecto 2: Gestor de fechas</h3>
-    <p><a href="https://juanfrina.github.io/Gestion-de-Fechas/">Ver proyecto</a></p>
-    <p><a href="https://github.com/Juanfrina/Gestion-de-Fechas">Ver código</a></p>
+    <!-- Sección principal con título y foto -->
+    <main>
+        <section class="hero">
+            <h1>Juan Francisco</h1>
+            <p class="subtitulo">Estudiante de Desarrollo de Aplicaciones Web</p>
+            <img src="imagenes/foto-perfil animado.png" alt="Juan Francisco - Perfil" class="foto-perfil">
+        </section>
 
-    <h2>Habilidades</h2>
-    <p></p>
-    
-    <h2>Contacto</h2>
-    <p>Email: jfhurtadop02@iesalbarregas.es</p>
-    <p>GitHub: <a href="https://github.com/Juanfrina">https://github.com/Juanfrina</a></p>
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Juan Francisco, alumno de Desarrollo de Aplicaciones Web (DAW).</p>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            
+            <div class="proyecto">
+                <h3>Guía de Estilos en Figma</h3>
+                <p>Diseño de una guía de estilos utilizando Figma.</p>
+                <div class="enlaces-proyecto">
+                    <a href="https://www.figma.com/design/lLY60QwawBcDnVJPYQTPIB/Sin-t%C3%ADtulo?node-id=0-1&t=TlMRY9pOhbTX0g6D-1" target="_blank" rel="noopener">Ver Proyecto</a>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <h3>Gestor de Fechas</h3>
+                <p>Aplicación web para gestionar fechas.</p>
+                <div class="enlaces-proyecto">
+                    <a href="https://juanfrina.github.io/Gestion-de-Fechas/" target="_blank" rel="noopener">Ver Demo</a>
+                    <a href="https://github.com/Juanfrina/Gestion-de-Fechas" target="_blank" rel="noopener">Ver Código</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="habilidad">
+                    <h4>Frontend</h4>
+                    <p>Aprendiendo</p>
+                </div>
+                <div class="habilidad">
+                    <h4>Diseño</h4>
+                    <p>Aprendiendo</p>
+                </div>
+                <div class="habilidad">
+                    <h4>Herramientas</h4>
+                    <p>Aprendiendo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-info">
+                <p><strong>Email:</strong> jfhurtadop02@iesalbarregas.es</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/Juanfrina" target="_blank" rel="noopener">github.com/Juanfrina</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Juan Francisco - Estudiante DAW. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
