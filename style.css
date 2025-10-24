@@ -196,34 +196,30 @@ footer {
     align-items: center;
 }
 
-/* Contenedor del logo y redes sociales */
 .logo-y-redes {
     display: flex;
-    flex-direction: column; /* Logo arriba, iconos abajo */
-    align-items: center; /* Centrado */
-    gap: 10px; /* Espacio entre logo e iconos */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 footer .logo-imagen {
     height: 40px;
 }
 
-/* Contenedor de iconos de redes sociales */
 .redes-sociales {
     display: flex;
-    gap: 15px; /* Espacio entre iconos */
+    gap: 15px;
 }
 
-/* Cada icono individual */
 .icono {
-    width: 25px; /* Tamaño pequeño */
+    width: 25px;
     height: 25px;
     transition: transform 0.3s ease;
 }
 
-/* Efecto hover en iconos */
 .icono-red:hover .icono {
-    transform: scale(1.2); /* Se agranda un poco */
+    transform: scale(1.2);
 }
 
 footer p {
@@ -263,18 +259,6 @@ footer p {
         flex-direction: column;
         gap: 15px;
         text-align: center;
-    }
-    
-    footer p {
-        text-align: center;
-    }
-    
-    .logo-y-redes {
-        order: 1; /* Logo y redes primero */
-    }
-    
-    footer p {
-        order: 2; /* Texto después */
     }
 }
 
