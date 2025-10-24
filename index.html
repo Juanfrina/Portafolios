@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Germano+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Juan Francisco - Portfolio</title>
 </head>
 
 <body>
-    <!-- Navegación principal -->
+    <!-- Navegación principal con logo -->
     <header>
-        <nav>
+        <nav class="nav-container">
+            <!-- Logo a la izquierda -->
+            <div class="logo">
+                <img src="imagenes/logoJF.jpg" alt="Juan Francisco Logo" class="logo-imagen">
+            </div>
+
+            <!-- Menú a la derecha -->
             <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -23,8 +31,8 @@
 
     <!-- Sección principal con título y foto -->
     <main>
-        <section class="hero">
-            <h1>Juan Francisco</h1>
+        <section id="inicio" class="hero">
+            <h1>Hola soy Juan Francisco</h1>
             <p class="subtitulo">Estudiante de Desarrollo de Aplicaciones Web</p>
             <img src="imagenes/foto-perfil animado.png" alt="Juan Francisco - Perfil" class="foto-perfil">
         </section>
@@ -38,40 +46,40 @@
         <!-- Sección Proyectos -->
         <section id="proyectos">
             <h2>Proyectos</h2>
-            
-            <div class="proyecto">
-                <h3>Guía de Estilos en Figma</h3>
-                <p>Diseño de una guía de estilos utilizando Figma.</p>
-                <div class="enlaces-proyecto">
-                    <a href="https://www.figma.com/design/lLY60QwawBcDnVJPYQTPIB/Sin-t%C3%ADtulo?node-id=0-1&t=TlMRY9pOhbTX0g6D-1" target="_blank" rel="noopener">Ver Proyecto</a>
-                </div>
-            </div>
 
-            <div class="proyecto">
-                <h3>Gestor de Fechas</h3>
-                <p>Aplicación web para gestionar fechas.</p>
-                <div class="enlaces-proyecto">
-                    <a href="https://juanfrina.github.io/Gestion-de-Fechas/" target="_blank" rel="noopener">Ver Proyecto</a>
-                    <a href="https://github.com/Juanfrina/Gestion-de-Fechas" target="_blank" rel="noopener">Ver Código</a>
+            <!-- NUEVO: Contenedor grid para proyectos -->
+            <div class="proyectos-grid">
+                <div class="proyecto">
+                    <h3>Guía de Estilos en Figma</h3>
+                    <p>Diseño de una guía de estilos utilizando Figma para establecer colores, tipografías y componentes
+                        consistentes.</p>
+                    <div class="enlaces-proyecto">
+                        <a href="https://www.figma.com/design/lLY60QwawBcDnVJPYQTPIB/Sin-t%C3%ADtulo?node-id=0-1&t=TlMRY9pOhbTX0g6D-1"
+                            target="_blank" rel="noopener">Ver Proyecto</a>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Sección Habilidades -->
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <div class="habilidades-grid">
-                <div class="habilidad">
-                    <h4>Frontend</h4>
-                    <p>Aprendiendo</p>
+                <div class="proyecto">
+                    <h3>Gestor de Fechas</h3>
+                    <p>Aplicación web para gestionar fechas importantes, desarrollada con HTML, CSS y JavaScript básico.
+                    </p>
+                    <div class="enlaces-proyecto">
+                        <a href="https://juanfrina.github.io/Gestion-de-Fechas/" target="_blank" rel="noopener">Ver
+                            Proyecto</a>
+                        <a href="https://github.com/Juanfrina/Gestion-de-Fechas" target="_blank" rel="noopener">Ver
+                            Código</a>
+                    </div>
                 </div>
-                <div class="habilidad">
-                    <h4>Diseño</h4>
-                    <p>Aprendiendo</p>
-                </div>
-                <div class="habilidad">
-                    <h4>Herramientas</h4>
-                    <p>Aprendiendo</p>
+
+                <!-- NUEVO: Tercer proyecto -->
+                <div class="proyecto">
+                    <h3>Portafolio Personal</h3>
+                    <p>Mi primer portafolio web creado con HTML, CSS y JavaScript. Incluye diseño responsive y paleta de
+                        colores moderna.</p>
+                    <div class="enlaces-proyecto">
+                        <a href="#inicio">Ver Demo</a>
+                        <a href="#" target="_blank" rel="noopener">Ver Código</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -88,7 +96,27 @@
 
     <!-- Pie de página -->
     <footer>
+        <div class="logo-y-redes">
+            <div class="logo">
+                <img src="imagenes/logoJF.jpg" alt="Juan Francisco Logo" class="logo-imagen">
+            </div>
+
+            <!-- Iconos de redes sociales -->
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" class="icono-red">
+                    <img src="imagenes/logotipo-de-instagram.png" alt="Instagram" class="icono">
+                </a>
+                <a href="https://www.facebook.com/tu_usuario" target="_blank" rel="noopener" class="icono-red">
+                    <img src="imagenes/facebook.png" alt="Facebook" class="icono">
+                </a>
+                <a href="https://github.com/Juanfrina" target="_blank" rel="noopener" class="icono-red">
+                    <img src="imagenes/github.png" alt="GitHub" class="icono">
+                </a>
+            </div>
+        </div>
+
         <p>&copy; 2025 Juan Francisco - Estudiante DAW. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

@@ -1,270 +1,280 @@
+/* CSS básico para portafolio de Juan Francisco */
 
-/* ===== CSS BÁSICO PARA PORTAFOLIO DE JUAN FRANCISCO ===== */
-
-/* PASO 1: Quitar estilos por defecto del navegador */
-* {
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin espaciado interno */
-    box-sizing: border-box; /* Para que los tamaños sean más predecibles */
+/* Variables necesarias */
+:root {
+    /* Colores principales */
+    --negro: #000000;
+    --verde: #22C55E;
+    --amarillo: #FFC107;
+    --blanco: #ffffff;
+    
+    /* Tipografías */
+    --fuente-titulos: 'Germano One', Arial;
+    --fuente-textos: 'Acme', Arial;
+    
+    /* Medidas que más se repiten */
+    --ancho-maximo: 800px;
+    --espaciado-mediano: 20px;
+    --espaciado-grande: 40px;
 }
 
-/* PASO 2: Configurar toda la página */
-html {
-    scroll-behavior: smooth; /* Scroll suave cuando haces clic en navegación */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif; /* Letra sencilla */
-    background-color: #000000; /* Fondo negro */
-    color: #ffffff; /* Letras blancas */
-    line-height: 1.6; /* Espaciado entre líneas para que se lea mejor */
+    font-family: var(--fuente-titulos);
+    background-color: var(--negro);
+    color: var(--blanco);
+    line-height: 1.6;
 }
 
-/* PASO 3: Barra de navegación arriba */
+/* Header */
 header {
-    background-color: #111111; /* Fondo gris muy oscuro */
-    padding: 15px 0; /* Espaciado arriba y abajo */
-    position: sticky; /* Se queda pegado arriba al hacer scroll */
-    top: 0; /* Pegado hasta arriba */
-    border-bottom: 2px solid #22C55E; /* Línea verde abajo */
+    background-color: var(--blanco);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid var(--verde);
 }
 
-/* Lista del menú de navegación */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+}
+
+.logo-imagen {
+    height: 50px;
+}
+
 .nav-menu {
-    list-style: none; /* Quita los puntos de la lista */
-    display: flex; /* Los pone en fila horizontal */
-    justify-content: center; /* Los centra */
-    gap: 30px; /* Espacio entre cada enlace */
-    max-width: 800px; /* Ancho máximo */
-    margin: 0 auto; /* Centra todo el menú */
-    padding: 0 20px; /* Espaciado a los lados */
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-/* Enlaces del menú */
 .nav-menu a {
-    color: #ffffff; /* Color blanco */
-    text-decoration: none; /* Sin subrayado */
-    padding: 8px 16px; /* Espaciado interno */
-    border-radius: 4px; /* Esquinas redondeadas */
-    border: 2px solid transparent; /* Borde invisible inicialmente */
-    transition: all 0.3s ease; /* Animación suave al cambiar */
+    background-color: var(--negro);
+    color: var(--amarillo);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
-/* Cuando pasas el mouse por encima de los enlaces */
 .nav-menu a:hover {
-    background-color: #22C55E; /* Fondo verde */
-    border-color: #22C55E; /* Borde verde */
-    color: #000000; /* Texto negro para que se vea bien */
+    background-color: var(--verde);
+    color: var(--negro);
 }
 
-/* PASO 4: Contenido principal */
+/* Contenido principal */
 main {
-    max-width: 800px; /* Ancho máximo para que no se vea muy ancho */
-    margin: 0 auto; /* Centra todo el contenido */
-    padding: 20px; /* Espaciado interno */
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: var(--espaciado-mediano);
 }
 
-/* PASO 5: Sección de presentación (título y foto) */
 .hero {
-    text-align: center; /* Todo centrado */
-    padding: 40px 0; /* Espaciado arriba y abajo */
+    text-align: center;
+    padding: var(--espaciado-grande) 0;
 }
 
-/* Título principal */
 h1 {
-    color: #ffffff; /* Color blanco */
-    font-size: 3em; /* Tamaño grande */
-    margin-bottom: 10px; /* Espacio abajo */
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-/* Subtítulo debajo del nombre */
-.subtitulo {
-    color: #22C55E; /* Color verde */
-    font-size: 1.2em; /* Tamaño mediano */
-    margin-bottom: 30px; /* Espacio abajo */
-    font-weight: bold; /* Texto en negrita */
-}
-
-/* Foto de perfil */
-.foto-perfil {
-    width: 200px; /* Ancho */
-    height: 200px; /* Alto */
-    border-radius: 50%; /* La hace circular */
-    border: 4px solid #22C55E; /* Borde verde */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    margin: 20px 0; /* Espacio arriba y abajo */
-}
-
-/* PASO 6: Secciones generales */
-section {
-    margin: 40px 0; /* Espacio entre secciones */
-    padding: 20px; /* Espaciado interno */
-}
-
-/* Títulos de cada sección (Sobre mí, Proyectos, etc.) */
 h2 {
-    color: #22C55E; /* Color verde */
-    font-size: 2em; /* Tamaño grande */
-    margin-bottom: 20px; /* Espacio abajo */
-    border-bottom: 3px solid #22C55E; /* Línea verde abajo */
-    padding-bottom: 10px; /* Espacio antes de la línea */
+    color: var(--verde);
+    font-size: 2em;
+    margin-bottom: var(--espaciado-mediano);
+    border-bottom: 3px solid var(--verde);
+    padding-bottom: 10px;
 }
 
-/* Títulos de proyectos */
 h3 {
-    color: #FFC107; /* Color amarillo */
-    font-size: 1.5em; /* Tamaño mediano */
-    margin: 20px 0 10px 0; /* Espacios arriba y abajo */
+    color: var(--amarillo);
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-/* Títulos pequeños (habilidades) */
-h4 {
-    color: #FFC107; /* Color amarillo */
-    font-size: 1.2em; /* Tamaño pequeño */
-    margin-bottom: 5px; /* Poco espacio abajo */
+.subtitulo {
+    font-family: var(--fuente-textos);
+    color: var(--verde);
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
-/* Párrafos normales */
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    border-radius: 25%;
+    border: 4px solid var(--verde);
+    object-fit: cover;
+    margin: var(--espaciado-mediano) 0;
+}
+
+section {
+    margin: var(--espaciado-grande) 0;
+    padding: var(--espaciado-mediano);
+}
+
 p {
-    margin-bottom: 15px; /* Espacio entre párrafos */
-    text-align: justify; /* Texto justificado */
+    font-family: var(--fuente-textos);
+    margin-bottom: 15px;
 }
 
-/* PASO 7: Estilos para proyectos */
+/* Proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espaciado-mediano);
+    margin-top: var(--espaciado-mediano);
+}
+
 .proyecto {
-    background-color: #1a1a1a; /* Fondo gris oscuro */
-    border: 2px solid #333333; /* Borde gris */
-    border-radius: 8px; /* Esquinas redondeadas */
-    padding: 20px; /* Espaciado interno */
-    margin-bottom: 25px; /* Espacio entre proyectos */
-    transition: transform 0.3s ease; /* Animación suave */
+    background-color: var(--negro);
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    padding: var(--espaciado-mediano);
 }
 
-/* Cuando pasas el mouse por un proyecto */
 .proyecto:hover {
-    transform: translateY(-5px); /* Se eleva un poco */
-    border-color: #22C55E; /* Borde se vuelve verde */
+    transform: translateY(-5px);
 }
 
-/* Contenedor de enlaces de cada proyecto */
-.enlaces-proyecto {
-    margin-top: 15px; /* Espacio arriba */
-}
-
-/* Enlaces dentro de proyectos (botones) */
 .enlaces-proyecto a {
-    background-color: #22C55E; /* Fondo verde */
-    color: #000000; /* Texto negro */
-    text-decoration: none; /* Sin subrayado */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Esquinas redondeadas */
-    margin-right: 10px; /* Espacio a la derecha */
-    display: inline-block; /* Para que funcione el padding */
-    margin-bottom: 10px; /* Espacio abajo */
-    font-weight: bold; /* Texto en negrita */
-    transition: all 0.3s ease; /* Animación suave */
+    background-color: var(--verde);
+    color: var(--negro);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
 }
 
-/* Cuando pasas el mouse por los botones de proyecto */
 .enlaces-proyecto a:hover {
-    background-color: #FFC107; /* Se vuelve amarillo */
+    background-color: var(--amarillo);
 }
 
-/* PASO 8: Sección de habilidades */
-.habilidades-grid {
-    display: grid; /* Usa sistema de cuadrícula */
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    gap: 20px; /* Espacio entre elementos */
-    margin-top: 20px; /* Espacio arriba */
-}
-
-/* Cada caja de habilidad */
-.habilidad {
-    background-color: #1a1a1a; /* Fondo gris oscuro */
-    border: 2px solid #FFC107; /* Borde amarillo */
-    border-radius: 8px; /* Esquinas redondeadas */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Texto centrado */
-    transition: transform 0.3s ease; /* Animación suave */
-}
-
-/* Cuando pasas el mouse por una habilidad */
-.habilidad:hover {
-    transform: scale(1.05); /* Se agranda un poco */
-    border-color: #22C55E; /* Borde se vuelve verde */
-}
-
-/* PASO 9: Sección de contacto */
+/* Contacto */
 #contacto {
-    background-color: #1a1a1a; /* Fondo gris oscuro */
-    border-radius: 10px; /* Esquinas redondeadas */
-    border: 2px solid #22C55E; /* Borde verde */
+    background-color: var(--negro);
+    border: 2px solid var(--verde);
+    border-radius: 8px;
 }
 
-/* Información de contacto */
-.contacto-info p {
-    font-size: 1.1em; /* Texto un poco más grande */
-    margin-bottom: 10px; /* Espacio entre líneas */
-}
-
-/* Palabras en negrita (Email:, GitHub:) */
 .contacto-info strong {
-    color: #FFC107; /* Color amarillo */
+    color: var(--amarillo);
 }
 
-/* Enlaces en contacto */
 .contacto-info a {
-    color: #22C55E; /* Color verde */
-    text-decoration: none; /* Sin subrayado */
+    color: var(--verde);
+    text-decoration: none;
 }
 
-/* Cuando pasas el mouse por enlaces de contacto */
 .contacto-info a:hover {
-    color: #FFC107; /* Se vuelve amarillo */
-    text-decoration: underline; /* Aparece subrayado */
+    color: var(--amarillo);
 }
 
-/* PASO 10: Pie de página */
+/* Footer */
 footer {
-    background-color: #111111; /* Fondo gris muy oscuro */
-    text-align: center; /* Texto centrado */
-    padding: 20px; /* Espaciado interno */
-    border-top: 2px solid #22C55E; /* Línea verde arriba */
-    margin-top: 40px; /* Espacio arriba */
+    background-color: var(--blanco);
+    padding: var(--espaciado-mediano);
+    border-top: 2px solid var(--verde);
+    margin-top: var(--espaciado-grande);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor del logo y redes sociales */
+.logo-y-redes {
+    display: flex;
+    flex-direction: column; /* Logo arriba, iconos abajo */
+    align-items: center; /* Centrado */
+    gap: 10px; /* Espacio entre logo e iconos */
+}
+
+footer .logo-imagen {
+    height: 40px;
+}
+
+/* Contenedor de iconos de redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 15px; /* Espacio entre iconos */
+}
+
+/* Cada icono individual */
+.icono {
+    width: 25px; /* Tamaño pequeño */
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en iconos */
+.icono-red:hover .icono {
+    transform: scale(1.2); /* Se agranda un poco */
 }
 
 footer p {
-    color: #cccccc; /* Color gris claro */
-    margin: 0; /* Sin margen */
+    color: var(--negro);
+    margin: 0;
 }
 
-/* PASO 11: Para móviles (cuando la pantalla es pequeña) */
+/* Responsive */
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 600px) {
-    /* Navegación en vertical en móviles */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
     .nav-menu {
-        flex-direction: column; /* En columna vertical */
-        gap: 10px; /* Menos espacio */
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
     
-    /* Título más pequeño en móviles */
-    h1 {
-        font-size: 2.2em; /* Más pequeño */
+    .proyectos-grid {
+        grid-template-columns: 1fr;
     }
     
-    /* Habilidades en una sola columna */
-    .habilidades-grid {
-        grid-template-columns: 1fr; /* Solo 1 columna */
-    }
-    
-    /* Menos espaciado en móviles */
-    main {
-        padding: 15px; /* Menos espaciado */
-    }
-    
-    /* Foto más pequeña en móviles */
     .foto-perfil {
-        width: 150px; /* Más pequeña */
-        height: 150px; /* Más pequeña */
+        width: 200px;
+        height: 200px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    footer p {
+        text-align: center;
+    }
+    
+    .logo-y-redes {
+        order: 1; /* Logo y redes primero */
+    }
+    
+    footer p {
+        order: 2; /* Texto después */
     }
 }
 
