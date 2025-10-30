@@ -1,16 +1,11 @@
 /* Variables necesarias */
 :root {
-    /* Colores principales */
     --negro: #000000;
     --verde: #22C55E;
     --amarillo: #FFC107;
     --blanco: #ffffff;
-    
-    /* Tipografías */
     --fuente-titulos: 'Germano One', Arial;
     --fuente-textos: 'Acme', Arial;
-    
-    /* Medidas que más se repiten */
     --ancho-maximo: 800px;
     --espaciado-mediano: 20px;
     --espaciado-grande: 40px;
@@ -34,7 +29,7 @@ body {
 header {
     background-color: var(--blanco);
     padding: 15px 0;
-    position: sticky;/* esto hace que el header se quede fijo en la parte superior al hacer scroll */
+    position: sticky;
     top: 0;
     border-bottom: 2px solid var(--verde);
 }
@@ -213,7 +208,6 @@ footer .logo-imagen {
 .icono {
     width: 25px;
     height: 25px;
-    transition: transform 0.3s ease;
 }
 
 .icono-red:hover .icono {
@@ -233,14 +227,9 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .nav-container {
+    .nav-container, .nav-menu, footer {
         flex-direction: column;
         gap: 15px;
-    }
-    
-    .nav-menu {
-        flex-direction: column;
-        gap: 10px;
         text-align: center;
     }
     
@@ -251,12 +240,6 @@ footer p {
     .foto-perfil {
         width: 200px;
         height: 200px;
-    }
-    
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
     }
 }
 
